@@ -1,0 +1,288 @@
+$BACKGROUND: darken(#0B0D0F, 2%);
+$FOREGROUND: #1C1E25;
+$BORDER: #202228;
+$INPUT: #181A1E;
+$INPUT_PLACEHOLDER: #6f7174;
+$INPUT_FOREGROUND: #181A1E;
+$SECONDARY_TEXT: #949494;
+
+body.dark{
+	background-color: $BACKGROUND;
+	color: white;
+
+	::selection{
+		background-color: darken(white, 50%);
+		color: white;
+	}
+}
+
+/* ================================== */
+/* DROPDOWN */
+/* ================================== */
+.ui.dropdown.selection.dark{
+	background-color: $FOREGROUND;
+	border-color: $BORDER;
+	color: white;
+
+	> .default.text{
+		color: $INPUT_PLACEHOLDER;
+	}
+	> .text:not(.default){
+		color: white !important;
+	}
+
+	&.active, &:focus{
+		background-color: lighten($FOREGROUND, 5%);
+		color: white;
+		border: 1px solid lighten($BORDER, 5%);
+	}
+	&:hover{
+		background-color: lighten($FOREGROUND, 1%);
+		border: 1px solid lighten($BORDER, 5%);
+	}
+	> .menu{
+		background-color: $FOREGROUND;
+		border-color: lighten($BORDER, 5%);
+		> .item{
+			border-color: lighten($BORDER, 5%);
+			color: white;
+		}
+	}
+}
+.ui.dropdown.dark{
+	&.pointing > .menu:not(.hidden)::after{
+		background-color: $INPUT;
+		box-shadow: -1px -1px 0 0 lighten($BORDER, 5%);
+	}
+}
+
+/* ================================== */
+/* INPUT */
+/* ================================== */
+input.dark, .fr.input input, textarea.dark, .fr.input textarea .fr.form.dark textarea{
+	background-color: $INPUT;
+	border-color: $BORDER;
+	color: white;
+
+	&:hover{
+		border-color: lighten($BORDER, 2%) !important
+	}
+	&:focus{
+		background-color: darken($INPUT, 1%) !important;
+	}
+	&::placeholder{
+		color: lighten($INPUT_PLACEHOLDER, 20%) !important;
+	}
+}
+
+.ui.modal.dark, .fr.groupper.dark{
+	input,textarea{
+		background-color: lighten($FOREGROUND, 10%);
+		border: 2px solid darken($BORDER, 2%);
+
+		&:hover{
+			border-width: 2px !important;
+			border-color: darken($BORDER, 4%) !important;
+		}
+		&:focus{
+			background-color: lighten($FOREGROUND, 15%) !important;
+		}
+		&::placeholder{
+			color: lighten($INPUT_PLACEHOLDER, 20%) !important;
+		}
+	}
+}
+
+/* ================================== */
+/* GROUPPER */
+/* ================================== */
+.fr.groupper.dark{
+	background-color: $FOREGROUND;
+	> .head{
+		color: white;
+		border: 0;
+		// border-color: $BORDER;
+		border-bottom: $BORDER 1px solid;
+		background-color: darken($FOREGROUND, 2%);
+	}
+	.ui.dropdown:not(.light){
+		$BACKGROUND: darken($INPUT, 1%);
+		background-color: $INPUT;
+		&.active, &:focus{
+			background-color: $BACKGROUND;
+			border: 1px solid darken($BORDER, 5%);
+		}
+		&:hover{
+			background-color: $BACKGROUND;
+			border: 1px solid lighten($BORDER, 2%);
+		}
+		> .menu{
+			background-color: darken($BACKGROUND, 1%);
+			border-color: lighten($BORDER, 3%);
+			> .item{
+				border-color: lighten($BORDER, 3%);
+				color: white;
+				&:hover{
+					background-color: $INPUT;
+				}
+			}
+		}
+	}
+	.actions{
+		background-color: darken($FOREGROUND, 2%);
+
+		.fr.loading.button::before, .fr.loading.button::after{
+			margin: -10.5px 0 0 -10.5px;
+		}
+	}
+}
+
+.ui.modal.dark .fr.groupper{
+	background-color: darken($FOREGROUND, 2%);
+	.content{
+		background-color: darken($FOREGROUND, 2%);
+	}
+	> .head{
+		background-color: darken($FOREGROUND, 5%);
+	}
+}
+
+/* ================================== */
+/* BUTTON */
+/* ================================== */
+
+.fr.button.dark{
+	background-color: white;
+	color: $FOREGROUND;
+	
+	&.black{
+		background-color: #0B0D0F;
+		&:hover{
+			background-color: darken(#0B0D0F, 3%) !important;
+		}
+	}
+	&.green{
+		color: #272B26;
+	}
+	&.loading{
+		opacity: 1 !important;
+		&::after{
+			border-left-color: $INPUT_PLACEHOLDER;
+		}
+		
+		&.black::after{
+			border-color: $FOREGROUND $FOREGROUND #CDCDCD $FOREGROUND !important;
+		}
+	}
+	&.basic:hover{
+		background-color: rgba(255, 255, 255, 0.8);
+		color: black;		
+	}
+}
+
+/* ================================== */
+/* TABLE */
+/* ================================== */
+
+table.fr.table.dark{
+	background-color: $FOREGROUND;
+	thead th{
+		background-color: darken($FOREGROUND, 1%);
+		color: white;
+		border-bottom-color: $BORDER;
+	}
+	&.striped{
+		tbody tr:nth-child(2n){
+			background-color: rgba(0,0,0,0.12);
+		}
+	}
+	&.selectable{
+		tbody tr:not(.noselect):hover{
+			background-color: rgba(0,0,0,0.3) !important;
+		}
+	}
+}
+.fr.groupper table.fr.table.dark{
+	border-top-color: $BORDER;
+	thead th{
+		background-color: darken($FOREGROUND, 2%);
+		color: white;
+		border-bottom-color: $BORDER;
+	}
+}
+
+/* ================================== */
+/* MODAL */
+/* ================================== */
+.ui.modal.dark{
+	background-color: $BACKGROUND;
+	.header{
+		background-color: darken($FOREGROUND, 5%);
+		color: white;
+		border-bottom-color: $BORDER;
+	}
+	.actions{
+		background-color: darken($FOREGROUND, 5%);
+		border-top-color: $BORDER;
+	}
+	.content{
+		background-color: $FOREGROUND;
+	}
+}
+
+/* ================================== */
+/* FORM */
+/* ================================== */
+.fr.form.dark{
+	.field.error{
+		input{
+			background-color: #934d4d;
+			border: 2px solid #802626;
+			&:hover{
+				border: 2px solid rgb(86, 29, 29) !important;
+			}
+			&::placeholder{
+				color: #ffc9c9 !important;
+			}
+			&:focus{
+				background-color: darken(#934d4d, 5%) !important;
+			}
+		}
+	}
+}
+
+/* ================================== */
+/* OTHER */
+/* ================================== */
+
+.fr.header.dark{
+	color: white;
+}
+
+.fr.message.dark{
+	&.error{
+		background-color: #ac3737;
+		color: #fff;
+	}
+}
+
+.fr.items.dark{
+	&.selectable{
+		.item:hover{
+			background-color: rgba(0,0,0,0.12) !important;
+		}
+	}
+	&.divided{
+		.item{
+			border-bottom-color: lighten($BORDER, 5%);
+		}
+	}
+	&.striped{
+		.item:nth-child(2n){
+			background-color: darken($FOREGROUND, 3%);
+		}
+	}
+	.item{
+		color: white;
+	}
+}

@@ -1,0 +1,147 @@
+@use "sass:map";
+$button-colors: 
+	"green" #1EAA6F white lighten(#1EAA6F, 10%),
+	"red" #EF4444 white #e64343,
+	"purple" #704FAF white #6748A1,
+	"black" #151717 white lighten(#151717, 10%),
+	"blue" #4d6adf white darken(#4d6adf, 10%),
+	"basic" transparent inherit rgba(0,0,0,0.1)
+;
+
+.fr.buttons{
+	display: flex;
+	.fr.button{
+		margin: 0 5px;
+		&:first-child{
+			margin-left: 0;
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	&.equal .fr.button{
+		flex-grow: 100;
+		flex-basis: 0;
+	}	
+}
+.fr.button{
+	padding: 10px 20px;
+	background-color: #E5E7EB;
+	color: #4B5563;
+	border-radius: 200px;
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+	border: 0;
+	font-size: inherit;
+	font-family: inherit;
+	text-decoration: none;
+	min-width: 120px;
+	font-weight: 700;
+	&:hover{
+		background-color: #dadfe6
+	}
+	&.fluid{
+		display: block;
+	}
+	&.icon i{
+		margin-right: 10px;
+	}
+	&.loading{
+		color: transparent !important;
+		position: relative;
+		user-select: none !important;
+	}
+	&.checkmark{
+		background-color: #75BF08 !important;
+		color: transparent !important;
+		position: relative;
+	}
+	&.checkmark::before{
+		content: "\f00c";
+		font-family: Icons;
+		font-style: normal;
+		font-weight: 400;
+		color: white;
+		position: absolute;
+		left: calc(50% - 8px);
+		font-size: 16px;
+	}
+	&.tiny{
+		padding: 5px 10px;
+		font-size: 12px;
+		min-width: 60px;
+		&.compact{
+			padding: 5px 20px;
+			min-width: 20px;
+			font-size: 14px;
+			line-height: 14px;
+			text-transform: none;
+			&.loading::after, &.loading::before{
+				width: 15px;
+				height: 15px;
+				margin: -7.5px 0 0 -7.5px;
+			}
+			&.icon{
+				> i{
+					margin-right: 0;
+				}
+				padding: 5px;
+				width: 25px;
+			}
+		}
+	}
+	&.small{
+		padding: 8px 15px;
+		font-size: 14px;
+	}
+	&.big{
+		font-size: 24px;
+		padding: 12px 25px;
+		&.loading{
+			&::before, &::after{
+				margin: -15px 0 0 -15px;
+				width: 20px;
+				height: 20px;
+			}
+			&::before{
+				border: .2em solid rgba(0,0,0,.15);
+			}
+			&::after{
+				border: .2em solid white;
+				border-top-color: transparent;
+				border-right-color: transparent;
+				border-bottom-color: transparent;
+			}
+		}
+	}
+	&.disabled,&.loading{
+		cursor: default;
+		opacity: 0.45 !important;
+		background-image: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		pointer-events: none !important;
+		user-select: none !important;
+	}
+}
+
+@each $name, $background, $color, $hover in $button-colors{
+	.fr.#{$name}.button{
+		color: $color;
+		background-color: $background;
+		&:hover{
+			background-color: $hover;
+		}
+		&.checkmark::before{
+			content: "\f00c";
+			font-family: Icons;
+			font-style: normal;
+			font-weight: 400;
+			color: $color;
+			position: absolute;
+			left: calc(50% - 8px);
+			font-size: 16px;
+		}
+	}
+}

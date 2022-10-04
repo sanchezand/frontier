@@ -1,0 +1,117 @@
+/* ================================== */
+/* TABLE */
+/* ================================== */
+table.fr.table{
+	width: 100%;
+	background-color: white;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06), 0 -1px 2px 0 rgba(0, 0, 0, 0.06);
+	border-collapse: collapse;
+	border-radius: 12px;
+	overflow: hidden;
+	
+	&.selectable{
+		tbody tr:not(.noselect):hover{
+			background-color: rgba(0, 0, 0, 0.06) !important;
+		}
+		tbody tr:not(.noselect){
+			cursor: pointer;
+		}
+		tbody tr:hover{
+			background-color: rgba(0, 0, 0, 0.04);
+			cursor: pointer;
+		}
+	}
+	
+	&.compact tr td{
+		height: 100%;
+	}
+	&:not(.compact) tr:not(.compact) td{
+		padding: 0.75rem 1rem;
+	}
+	&.details{
+		td{
+			border-right: 1px solid rgba(0,0,0,0.1);
+			&:last-child{
+				padding-left: 20px;
+			}
+			&:first-child{
+				font-weight: bold;
+				max-width: 120px;
+				width: 1px;
+				white-space: nowrap;
+				padding-right: 20px;
+			}
+		}
+		td:last-child, th:last-child{
+			border-right: 0;
+		}
+		&.striped tr td:first-child{
+			color:rgba(0, 0, 0, 0.65)
+		}
+	}
+	&.striped tbody tr:nth-child(even){
+		background-color: rgba(0, 0, 0, 0.02);
+	}
+	
+	thead th{
+		text-transform: uppercase;
+		background-color: #F9FAFB;
+		border-bottom: 1px solid #e5e7eb;
+		padding: 0.75rem 1rem;
+		text-align: left;
+		font-size: 12px;
+		color:rgba(0, 0, 0, 0.6)
+	}
+	tfoot tr{
+		background-color: #F9FAFB;
+		border-top: 1px solid #e5e7eb;
+	}
+	tr td a{
+		padding: 0.75rem 1rem;
+		display: block;
+		color: black;
+		text-decoration: none;
+	}
+	tr.fat td{
+		padding: 0.75rem 1rem;
+	}
+	td{
+		&.red{	
+			color: #a72a2a;
+		}
+		&.green{
+			color: green;
+		}
+		&.yellow{
+			color: #c57f41e6;
+		}
+		&.empty,&.gray{
+			color: gray;
+			text-align: center;
+		}
+	}
+	td.collapsing, th.collapsing{
+		width: 1px;
+		white-space: nowrap;
+	}
+	td.centered, th.centered{
+		text-align: center;
+	}
+	th.title{
+		color: rgba(0, 0, 0, 0.8);
+		font-size: 18px;
+	}
+	tr.divider{
+		padding-top: 5px;
+		height: 1px;
+		padding-bottom: 5px;
+	}
+}
+
+.fr.groupper table.fr.table{
+	margin: 15px -20px 0 -20px;
+	border-radius: 0 !important;
+	width: calc(100% + 40px);
+	border-top: 1px solid #e5e7eb;
+	box-shadow: none !important;
+}

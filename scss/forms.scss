@@ -1,0 +1,111 @@
+/* ================================== */
+/* FORMS */
+/* ================================== */
+input{
+	padding: 10px;
+	background-color: #fafafa;
+	border: 1px solid #e0e0e0;
+	transition: all 200ms;
+	border-radius: 8px;
+	&:hover{
+		border: 1px solid #cacaca;
+	}
+	&::placeholder{
+		color: #686868;
+	}
+	&:focus{
+		background-color: white;
+		box-shadow: 0 0 5px 0px rgba(0,0,0,0.1);
+		border: 1px solid rgba(0,0,0,0.1);
+		transition: all 200ms;
+		outline: none;
+	}
+}
+.fr.form,.fr.input{
+	margin: 0;
+
+	input{
+		font-size: 14px;
+		display: block;
+		width: 100%;
+	}
+	
+	.field, .fields{
+		margin-bottom: 10px;
+		.field{
+			margin-bottom: 0;
+		}
+		&.error{
+			input{
+				background-color: #FEE2E2;
+				border: 1px solid #FECACA;
+			}
+			input::placeholder{
+				color: #c74242;
+			}
+			label{
+				color: #c96e6e;
+			}
+		}
+		&.warning{
+			label{
+				color: #a4912b
+			}
+			input::placeholder{
+				color: #534c17;	
+			}
+			input{
+				background-color: #FFF9E2;
+				border: 1px solid #E8DDA4;
+			}
+		}
+		.fr.input{
+			margin-bottom: 0;
+		}
+	}
+	.field > label, > label{
+		display: block;
+		font-size: 14px;
+		font-weight: bold;
+		margin-bottom: 5px;
+		margin-left: 5px;
+	}
+	.two.fields{
+		display: flex;
+		justify-content: space-between;
+		.field{
+			width: calc(50% - 5px);
+		}
+		.field:first-child{
+			margin-right: 5px;
+		}
+		.field:last-child{
+			margin-left: 5px;
+			margin-right: 0;
+		}
+	}
+	.three.fields{
+		display: flex;
+
+		.field{
+			margin-left: 2px;
+			margin-right: 2px;
+			width: 33%;
+		}
+		.field:first-child{
+			margin-left: 0;
+		}
+		.field:last-child{
+			margin-right: 0;
+		}
+	}
+
+	.comment{
+		display: block;
+		font-size: 14px;
+		margin-bottom: 5px;
+		margin-left: 5px;
+		margin-top: -5px;
+		color: gray;
+	}
+}
