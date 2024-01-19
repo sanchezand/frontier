@@ -1,7 +1,7 @@
 /* ================================== */
 /* FORMS */
 /* ================================== */
-input{
+input,textarea{
 	padding: 10px;
 	background-color: #fafafa;
 	border: 1px solid #e0e0e0;
@@ -21,42 +21,58 @@ input{
 		outline: none;
 	}
 }
-.fr.form,.fr.input{
+
+.fr.fieldlabel{
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 2px;
+	margin-left: 5px;
+}
+
+.fr.form,.fr.input,.fr.field,.fr.fields{
 	margin: 0;
 
-	input{
+	input,textarea{
 		font-size: 14px;
 		display: block;
 		width: 100%;
 	}
+
+	&.error,.field.error,.fields.error{
+		input,textarea{
+			background-color: #FEE2E2;
+			border: 1px solid #FECACA;
+		}
+		input::placeholder,textarea::placeholder{
+			color: #c74242;
+		}
+		label{
+			color: #c96e6e;
+		}
+	}
+	&.warning,.field.warning,.fields.warning{
+		label{
+			color: #a4912b
+		}
+		input::placeholder,textarea::placeholder{
+			color: #534c17;	
+		}
+		input,textarea{
+			background-color: #FFF9E2;
+			border: 1px solid #E8DDA4;
+		}
+	}
 	
 	.field, .fields{
 		margin-bottom: 10px;
-		.field{
+		.field,> .fr.input{
 			margin-bottom: 0;
 		}
-		&.error{
+		&.centered{
+			text-align: center;
 			input{
-				background-color: #FEE2E2;
-				border: 1px solid #FECACA;
-			}
-			input::placeholder{
-				color: #c74242;
-			}
-			label{
-				color: #c96e6e;
-			}
-		}
-		&.warning{
-			label{
-				color: #a4912b
-			}
-			input::placeholder{
-				color: #534c17;	
-			}
-			input{
-				background-color: #FFF9E2;
-				border: 1px solid #E8DDA4;
+				text-align: center;
 			}
 		}
 		.fr.input{
@@ -67,19 +83,19 @@ input{
 		display: block;
 		font-size: 14px;
 		font-weight: bold;
-		margin-bottom: 5px;
+		margin-bottom: 2px;
 		margin-left: 5px;
 	}
 	.two.fields{
 		display: flex;
 		justify-content: space-between;
-		.field{
+		.field, > .fr.input{
 			width: calc(50% - 5px);
 		}
-		.field:first-child{
+		.field:first-child, > .fr.input:first-child{
 			margin-right: 5px;
 		}
-		.field:last-child{
+		.field:last-child, > .fr.input:last-child{
 			margin-left: 5px;
 			margin-right: 0;
 		}
@@ -108,4 +124,39 @@ input{
 		margin-top: -5px;
 		color: gray;
 	}
+}
+
+.fr.fields{
+	&.three,&.two{
+		.field, > .fr.input{
+			margin-left: 2px;
+			margin-right: 2px;
+			&:first-child{
+				margin-left: 0;
+			}
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+	&.three{
+		.field, > .fr.input{
+			width: 33%;
+		}
+	}
+	&.two{
+		.field, > .fr.input{
+			width: calc(50% - 5px);
+		}
+	}
+	display: flex;
+}
+
+.fr.field{
+	.ui.dropdown{
+		width: 100%;
+	}
+}
+.fr.field,.fr.fields .field, .fr.fields > .fr.input{
+	margin-bottom: 8px;
 }

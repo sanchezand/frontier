@@ -3,36 +3,39 @@
 /* ================================== */
 .ui.modal{
 	border-radius: 12px !important;
+	> .header{
+		background-color: #F9FAFB;
+		border-bottom: 1px solid #e5e7eb;
+		border-top-left-radius: 12px !important;
+		border-top-right-radius: 12px !important;
+	}
+	> .actions{
+		background-color: #F9FAFB;
+		border-top: 1px solid #e5e7eb;
+	}
+	> :last-child{
+		border-bottom-left-radius: 12px !important;
+		border-bottom-right-radius: 12px !important;
+	}
+	> :first-child:not(.close):not(.dimmer){
+		border-top-left-radius: 12px !important;
+		border-top-right-radius: 12px !important;
+	}
+	> .content{
+		width: auto !important;
+		&.loading > *{
+			display: none;
+		}
+		&.scrolling.static{
+			height: calc(65vh - 10rem);
+		}
+		.header{
+			background-color: transparent !important;
+			border-bottom: none !important;
+		}
+	}
 }
-.ui.modal > .header{
-	background-color: #F9FAFB;
-	border-bottom: 1px solid #e5e7eb;
-	border-top-left-radius: 12px !important;
-	border-top-right-radius: 12px !important;
-}
-.ui.modal > .actions{
-	background-color: #F9FAFB;
-	border-top: 1px solid #e5e7eb;
-}
-.ui.modal > :last-child{
-	border-bottom-left-radius: 12px !important;
-	border-bottom-right-radius: 12px !important;
-}
-.ui.modal > :first-child:not(.close):not(.dimmer){
-	border-top-left-radius: 12px !important;
-	border-top-right-radius: 12px !important;
-}
-.ui.modal .content .header{
-	background-color: transparent !important;
-	border-bottom: none !important;
-}
-.ui.modal .scrolling.content.static{
-	height: calc(65vh - 10rem);
-}
-.ui.modal > .content{
-	width: auto !important;
-}
-.ui.confirm-ation.modal form:empty{
+.ui.confirmation.modal form:empty{
 	margin: 0;
 }
 
@@ -85,38 +88,31 @@
 .ui.selection.dropdown:focus,.ui.selection.dropdown:hover{
 	border: 1px solid #cacaca !important;
 }
-.ui.selection.dropdown .menu{
+.ui.dropdown .menu{
 	border-color: #e0e0e0 !important;
 	border-top-width: 1px !important;
-	width: 100% !important;
-	min-width: 100% !important;
-	border-radius: 8px;
+	// width: 100% !important;
+	// min-width: 100% !important;
+	border-radius: 8px !important;
 	top: calc(100% + 5px);
 	z-index: 1000;
 }
-.ui.selection.dropdown.upward .menu{
+.ui.dropdown.upward .menu{
 	top: auto;
 	bottom: 100%;
 	max-height: 200px;
 	margin-bottom: 10px;
 	border-bottom-width: 1px !important;
 }
-.ui.button.selection.dropdown{
-	border: none;
-	background-color: #A3E63536;
-	color: #365314e6;
-	margin: auto;
-	display: block;
-	max-width: 200px;
-	min-width: 200px;
-	margin-bottom: 10px;
+.ui.dropdown.full .menu{
+	width: 100%;
 }
-.ui.button.selection.dropdown:hover, .ui.button.selection.dropdown:focus{
-	border: none !important;
-	background-color: #A3E63536 !important;
-	color: #365314e6 !important;
-	background-color: #a5e43f36 !important;
-}
+// .ui.button.selection.dropdown:hover, .ui.button.selection.dropdown:focus{
+// 	border: none !important;
+// 	background-color: #A3E63536 !important;
+// 	color: #365314e6 !important;
+// 	background-color: #a5e43f36 !important;
+// }
 .ui.dropdown .menu .item.destructive{
 	color: #B91C1C
 }
@@ -143,3 +139,46 @@
 // 	font-weight: 900;
 // 	content: '\f00c';
 // }
+
+.ui.rating{
+	height: 20px;
+}
+.ui.rating .icon {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	font-weight: 400;
+	font-style: normal;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+	cursor: pointer;
+	width: 1.25em;
+	height: auto;
+	-webkit-transition: opacity .1s ease,background .1s ease,text-shadow .1s ease,color .1s ease;
+	transition: opacity .1s ease,background .1s ease,text-shadow .1s ease,color .1s ease;
+}
+.ui.star.rating .icon{
+	width: 1.25em;
+	height: auto;
+	background: 0 0;
+	color: rgba(0,0,0,.15);
+	text-shadow: none;
+ }
+.ui.star.rating .active.icon {
+	background: 0 0 !important;
+	color: #ffe623 !important;
+	text-shadow: 0 -1px 0 #ddc507,-1px 0 0 #ddc507,0 1px 0 #ddc507,1px 0 0 #ddc507 !important;
+}
+.ui.star.rating .icon::before {
+	content: '\f005';
+}
+.ui.star.rating .icon.selected, .ui.star.rating .icon.selected.active {
+	background: 0 0 !important;
+	color: #fc0 !important;
+	text-shadow: 0 -1px 0 #e6a200,-1px 0 0 #e6a200,0 1px 0 #e6a200,1px 0 0 #e6a200 !important;
+}
+
+.ui.popup{
+	border-radius: 12px !important;
+}

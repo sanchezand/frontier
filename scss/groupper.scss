@@ -23,6 +23,10 @@
 		.fr.button{
 			line-height: 14px;
 		}
+
+		&:empty{
+			display: none;
+		}
 	}
 	> .head{
 		margin: -21px -21px;
@@ -42,19 +46,33 @@
 		align-items: center;
 		height: 45px;
 		
-		&.fitted{
+		&.fitted,&.compact{
 			margin-bottom: 0px;
 		}
 		&.centered{
 			justify-content: center;
 			text-align: center;
 		}
+		&.section{
+			border-radius: 0;
+			margin-top: 15px;
+
+			&.small{
+				font-size: 14px;
+				height: 35px;
+				margin-bottom: 5px;
+				text-transform: none;
+			}
+			&.top{
+				margin-top: -21px;
+			}
+		}
 		&.big{
 			text-transform: none;
-			padding: 20px;
+			padding: 30px 20px;
 			font-size: 28px;
 			font-weight: bold;
-			text-align: center;
+			// text-align: center;
 		}
 		.left,.text{
 			flex-grow: 100;
@@ -79,17 +97,39 @@
 			}
 		}
 	}
-	&.fitted, &.compact{
+	&.fitted{
 		padding: 0;
 		> .head{
 			margin: -1px;
+			&.section.top{
+				margin-top: 0;
+			}
 		}
 		> .content{
 			padding: 0;
 		}
+		> .actions{
+			margin: 0;
+			width: 100%;
+		}
 		table.fr.table{
 			margin: -1px;
 			width: 100%;
+		}
+	}
+	&.compact{
+		padding: 10px;
+		> .head{
+			margin: -11px -11px 10px -11px;
+			&.section:not(.top){
+				margin-top: 10px;
+			}
+			&.section.top{
+				margin-top: -10px;
+			}
+		}
+		> .content{
+			padding: 10px;
 		}
 	}
 	&.scolling,&.scrollable,&.scroll{
@@ -152,11 +192,17 @@
 		}
 	}
 
-	.divider{
+	> .divider{
 		width: 100%;
 		height: 1px;
 		border-top: 1px solid rgba(0, 0, 0, 0.1);
 		width: calc(100% + 40px);
 		margin: 20px 0 20px -20px;
+		&.dashed{
+			border-top-style: dashed;
+		}
+		&.dotted{
+			border-top-style: dotted;
+		}
 	}
 }

@@ -9,7 +9,7 @@
 		width: 100%;
 		display: block;
 		position: relative;
-		input{
+		input,textarea{
 			width: 100%;
 		}
 	}
@@ -17,20 +17,6 @@
 		i.fas{
 			padding: 5px 5px 5px 4px;
 			font-size: 14px;
-		}
-		&.loading{
-			i{
-				display: none;
-			}
-			input{
-				padding-left: 35px;
-			}
-			&::before, &::after{
-				left: 28px;	
-				top: 28px;
-				height: 18px;
-				width: 18px;
-			}
 		}
 		i,img{
 			position: absolute;
@@ -45,30 +31,61 @@
 			top: 11px;
 			fill: #94d31b;
 		}
-		input{
+		input,textarea{
 			display: block;
 			padding-left: 38px;
 		}
 	}
+	&.loading{
+		i{
+			display: none;
+		}
+		input,textarea{
+			padding-left: 38px;
+		}
+		&::before, &::after{
+			left: 25px;	
+			top: 23px;
+			height: 18px;
+			width: 18px;
+		}
+		&::before{
+			border: .2em solid rgba(0,0,0,.30);
+		}
+	}
 	&.action{
 		display: flex;
-		input{
+		input,textarea{
 			flex-grow: 100;
 			border-right: 0;
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
 		}
 		.fr.button{
-			border-top-left-radius: 0;
-			border-bottom-left-radius: 0;
 			display: inline;
-			padding-left: 15px;
-			border-top-right-radius: 8px;
-			border-bottom-right-radius: 8px;
+			border-radius: 0;
+			border-right: 1px solid #d6d6d6;
+			&.icon{
+				min-width: 12px;
+				font-size: 16px;
+				padding-left: 15px;
+				padding-right: 15px;
+				i.icon{
+					line-height: 29px;
+				// 	margin: 0;
+				// 	margin-right: 4px;
+				// 	margin-top: 2px;
+				}
+			}
+			&:last-of-type{
+				border-right: none;
+				border-top-right-radius: 8px;
+				border-bottom-right-radius: 8px;
+			}
 		}
 	}
 }
-input.circular{
+input.circular,textarea.circular{
 	border-radius: 100px;
 	padding: 10px 15px;
 }
