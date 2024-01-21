@@ -125,6 +125,18 @@ table.fr.table{
 	&.striped tbody tr:nth-child(even){
 		background-color: rgba(0, 0, 0, 0.02);
 	}
+	&.divided tbody tr, &.celled tbody tr{
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+	&.celled tbody tr td{
+		border-right: 1px solid rgba(0, 0, 0, 0.1);
+		&:last-child{
+			border-right: none;
+		}
+	}
 	
 	thead th, tbody td.header, tbody tr.header td{
 		text-transform: uppercase;
