@@ -44,6 +44,7 @@ table.fr.table.calendar{
 				border-radius: 8px;
 				// width: 40px;
 				width: auto;
+				min-width: 40px;
 				height: 40px;
 				margin: 3px;
 				cursor: pointer;
@@ -94,15 +95,15 @@ table.fr.table.calendar{
 }
 
 $active-colors: 
-	"green" #1EAA6F,
-	"red" #EF4444,
-	"purple" #704FAF,
-	"gray" #151717,
-	"blue" #4D6ADF,
-	"orange" #F37435,
+	"green" #1EAA6F darken(#1EAA6F, 5%),
+	"red" #EF4444 #e64343,
+	"purple" #704FAF #6748A1,
+	"gray" #151717 lighten(#151717, 10%),
+	"blue" #4d6adf darken(#4d6adf, 10%),
+	"orange" #F37435 darken(#F37435, 5%),
 ;
 
-@each $name, $background in $button-colors{
+@each $name, $background, $hover in $button-colors{
 	table.fr.#{$name}.table.calendar tbody tr td{
 		.date,.time{
 			&.active{
