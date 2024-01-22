@@ -1,0 +1,116 @@
+@use "sass:color";
+@use "sass:map";
+
+table.fr.table.calendar{
+	$hover_color: rgba(0, 0, 0, 0.06) !important;
+	$active_color: rgb(0, 0, 0, 0.10);
+	tbody tr{
+		&:last-child td{
+			// &:not(.today){
+			// 	border-bottom: none;
+			// }
+			border-bottom: none;
+		}
+		td{
+			border: 1px solid #f0f0f0;
+			padding: 1px !important;
+			text-align: center;
+			position: relative;
+			&.empty{
+				border: none;
+			}
+			// &:not(.today){
+			// 	&:first-child{
+			// 		border-left: none;
+			// 	}
+			// 	&:not(.last):last-child{
+			// 		border-right: none;
+			// 	}
+			// }
+			&.today{
+				font-weight: bold;
+				// border-width: 2px;
+				// border-color: #c7c7c7;
+
+				// .date,.time{
+				// 	border-radius: 0 !important;
+				// }
+			}
+			// &.last{
+			// 	border-right: 0;
+			// }
+			.date:not(.empty),.time{
+				display: inline-flex;
+				border-radius: 8px;
+				// width: 40px;
+				width: auto;
+				height: 40px;
+				margin: 3px;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				&.active{
+					font-weight: bold;
+					background-color: $active_color;
+				}
+				&:hover{
+					background-color: $hover_color;
+					&.active{
+						background-color: color.change($active_color, $alpha: 0.12) !important;
+					}
+				}
+			}
+			.time{
+				border-radius: 6px;
+				// width: 75px;
+				height: 35px;
+			}
+		}
+	}
+	thead tr th{
+		padding-top: 6px;
+		padding-bottom: 6px;
+		text-align: center;
+
+		&.prev,&.next{
+			width: 55px;
+			text-align: center;
+		}
+	}
+	thead tr:first-child th:hover{
+		cursor: pointer;
+		background-color: $hover_color;
+	}
+
+	&.months,&.years{
+		table-layout: fixed;
+		thead tr th{
+			&.prev,&.next{
+				width: auto;
+			}
+		}
+	}
+}
+
+$active-colors: 
+	"green" #1EAA6F,
+	"red" #EF4444,
+	"purple" #704FAF,
+	"gray" #151717,
+	"blue" #4D6ADF,
+	"orange" #F37435,
+;
+
+@each $name, $background in $button-colors{
+	table.fr.#{$name}.table.calendar tbody tr td{
+		.date,.time{
+			&.active{
+				background-color: color.change($background, $alpha: 0.2) !important;
+				&:hover{
+					background-color: color.change($background, $alpha: 0.3) !important;
+				}
+			}
+		}
+	}
+}

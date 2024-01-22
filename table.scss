@@ -37,72 +37,6 @@ table.fr.table{
 			}
 		}
 	}
-	&.calendar{
-		tbody tr{
-			&:last-child td{
-				border-bottom: none;
-			}
-			td{
-				border: 1px solid #f0f0f0;
-				padding: 1px !important;
-				text-align: center;
-				&.empty{
-					border: none;
-				}
-				&:first-child{
-					border-left: none;
-				}
-				&:not(.last):last-child{
-					// border-right-color: red;
-					border-right: none;
-				}
-				&.today{
-					font-weight: bold;
-					border-width: 2px;
-					border-color: #c7c7c7;
-
-					.date,.time{
-						border-radius: 0 !important;
-					}
-				}
-				// &.last{
-				// 	border-right: 0;
-				// }
-				.date:not(.empty),.time{
-					display: inline-flex;
-					border-radius: 8px;
-					width: 40px;
-					height: 40px;
-					margin: auto;
-					cursor: pointer;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					&.active{
-						font-weight: bold;
-						background-color: rgb(253, 106, 8, 0.15);
-					}
-					&:hover{
-						background-color: $hover_color;
-					}
-				}
-				.time{
-					border-radius: 6px;
-					width: 75px;
-					height: 35px;
-				}
-			}
-		}
-		thead tr th{
-			padding-top: 6px;
-			padding-bottom: 6px;
-		}
-		thead tr:first-child th:hover{
-			cursor: pointer;
-			background-color: $hover_color;
-		}
-	}
-	
 	&.compact tr td{
 		height: 100%;
 	}
@@ -160,10 +94,10 @@ table.fr.table{
 	}
 	thead th{
 		&:first-child{
-			border-top-left-radius: 12px;
+			border-top-left-radius: $border_radius;
 		}
 		&:last-child{
-			border-top-right-radius: 12px;
+			border-top-right-radius: $border_radius;
 		}
 	}
 	tbody td.header, tbody tr.header td{
