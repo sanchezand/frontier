@@ -10,6 +10,11 @@
 	z-index: 999;
 	width: auto;
 
+	&.top{
+		top: unset;
+		bottom: calc(100% + 10px);
+	}
+
 	&.basic{
 		background-color: none;
 		padding: 0;

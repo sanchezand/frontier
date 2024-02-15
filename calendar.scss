@@ -55,10 +55,17 @@ table.fr.table.calendar{
 					font-weight: bold;
 					background-color: $active_color;
 				}
-				&:hover{
+				&:not(.disabled):hover{
 					background-color: $hover_color;
 					&.active{
 						background-color: color.change($active_color, $alpha: 0.12) !important;
+					}
+				}
+				&.disabled{
+					color: #CCC;
+					cursor: default;
+					&:hover,&.active:hover{
+						background-color: transparent !important;
 					}
 				}
 			}
