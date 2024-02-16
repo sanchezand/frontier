@@ -41,11 +41,12 @@
 			display: none;
 		}
 		input,textarea{
-			padding-left: 38px;
+			padding-left: 38px !important;
 		}
 		&::before, &::after{
-			left: 25px;	
-			top: 23px;
+			left: 23px;	
+			z-index: 2;
+			top: calc(100% - 22px);
 			height: 18px;
 			width: 18px;
 		}
