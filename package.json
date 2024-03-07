@@ -1,0 +1,19 @@
+{
+	"name": "frontier-css",
+	"version": "1.0.1",
+	"description": "",
+	"main": "",
+	"scripts": {
+		"build": "rm -rf ./css & sass .:./css --style compressed & rm -rf ./css/node_modules",
+		"prepublish": "rm -rf ./css & sass .:./css --style compressed & rm -rf ./css/node_modules"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"scss": "^0.2.4"
+	},
+	"files": [
+		"css/*.css",
+		"css/*.css.map"
+	]
+}
