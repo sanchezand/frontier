@@ -151,10 +151,13 @@ input,textarea{
 }
 
 .fr.field{
+	.fr.input{
+		margin-bottom: 0;
+	}
 	.ui.dropdown{
 		width: 100%;
 	}
 }
-.fr.field,.fr.fields .field, .fr.fields > .fr.input{
-	margin-bottom: 8px;
+.fr.field,.fr.fields .field{
+	margin-bottom: 10px;
 }

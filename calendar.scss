@@ -110,7 +110,7 @@ $active-colors:
 	"orange" #F37435 darken(#F37435, 5%),
 ;
 
-@each $name, $background, $hover in $button-colors{
+@each $name, $background, $hover in $active-colors{
 	table.fr.#{$name}.table.calendar tbody tr td{
 		.date,.time{
 			&.active{
