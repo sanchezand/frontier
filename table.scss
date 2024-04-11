@@ -246,7 +246,7 @@ table.fr.table .fr.button.loading{
 // }
 
 
-.fr.groupper:not(.fitted) table.fr.table:not(.unfitted),.ui.modal table.fr.fitted.table{
+.fr.groupper:not(.fitted) table.fr.table:not(.unfitted):not(.calendar),.ui.modal table.fr.fitted.table{
 	margin: 0 -19px 0 -20px;
 	width: calc(100% + 40px);
 	$BORDER: 1px solid #e5e7eb;
