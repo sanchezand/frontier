@@ -184,7 +184,7 @@ input[type="password"] {
 	}
 }
 
-.fr.loading{
+.fr.loading:not(.header){
 	&::before{
 		position: absolute;
 		content: '';
@@ -624,6 +624,17 @@ form > .fr.error.message, .fr.small.error.message{
 		font-size: 5em;
 		.sub.header{
 			font-size: 20px
+		}
+	}
+	&.loading{
+		font-weight: bold;
+		font-size: 18px;
+		color: #888;
+		&::before{
+			display: none;
+		}
+		&::after{
+			display: none;
 		}
 	}
 
