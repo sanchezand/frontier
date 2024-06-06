@@ -1,6 +1,6 @@
 {
 	"name": "frontier-css",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "",
 	"main": "",
 	"scripts": {
@@ -10,6 +10,7 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
+		"sass": "^1.77.4",
 		"scss": "^0.2.4"
 	},
 	"files": [
