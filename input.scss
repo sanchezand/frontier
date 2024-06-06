@@ -14,18 +14,18 @@
 		}
 	}
 	&.icon{
-		i.fas{
+		> i.fas{
 			padding: 5px 5px 5px 4px;
 			font-size: 14px;
 		}
-		i,img{
+		> i, > img{
 			position: absolute;
 			top: 13px;
 			left: 15px;
 			color: #404040;
 			font-size: 13px;
 		}
-		img{
+		> img{
 			width: 20px;
 			left: 10px;
 			top: 11px;
@@ -37,7 +37,7 @@
 		}
 	}
 	&.loading{
-		i{
+		> i{
 			display: none;
 		}
 		input,textarea{

@@ -5,6 +5,7 @@ table.fr.table.calendar{
 	$hover_color: rgba(0, 0, 0, 0.06) !important;
 	$active_color: rgb(0, 0, 0, 0.10);
 	tbody tr{
+		font-size: 14px;
 		&:last-child td{
 			// &:not(.today){
 			// 	border-bottom: none;
@@ -16,29 +17,14 @@ table.fr.table.calendar{
 			padding: 1px !important;
 			text-align: center;
 			position: relative;
+			font-size: 14px;
+
 			&.empty{
 				border: none;
 			}
-			// &:not(.today){
-			// 	&:first-child{
-			// 		border-left: none;
-			// 	}
-			// 	&:not(.last):last-child{
-			// 		border-right: none;
-			// 	}
-			// }
 			&.today{
 				font-weight: bold;
-				// border-width: 2px;
-				// border-color: #c7c7c7;
-
-				// .date,.time{
-				// 	border-radius: 0 !important;
-				// }
 			}
-			// &.last{
-			// 	border-right: 0;
-			// }
 			.date:not(.empty),.time{
 				display: inline-flex;
 				border-radius: 8px;
@@ -77,6 +63,7 @@ table.fr.table.calendar{
 		}
 	}
 	thead tr th{
+		font-size: 12px;
 		padding-top: 6px;
 		padding-bottom: 6px;
 		text-align: center;
