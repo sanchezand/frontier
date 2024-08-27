@@ -1,14 +1,5 @@
 @use "sass:map";
-$button-colors: 
-	"green" #1EAA6F white darken(#1EAA6F, 5%),
-	"red" #EF4444 white #e64343,
-	"purple" #704FAF white #6748A1,
-	"black" #151717 white lighten(#151717, 10%),
-	"blue" #4d6adf white darken(#4d6adf, 10%),
-	"orange" #F37435 white darken(#F37435, 5%),
-	"white" #f5f5f5 black darken(#f5f5f5, 5%),
-	"yellow" #FFEA03 black lighten(#FFEA03, 15%),
-;
+@import "_colors.scss";
 
 .fr.buttons{
 	display: flex;
@@ -143,7 +134,7 @@ $button-colors:
 	line-height: 20px !important;
 }
 
-@each $name, $background, $color, $hover in $button-colors{
+@each $name, $background, $color, $hover in $frontier-colors{
 	.fr.#{$name}.button{
 		color: $color;
 		background-color: $background;
