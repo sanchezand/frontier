@@ -1,0 +1,82 @@
+@use "sass:map";
+@import "_colors.scss";
+
+.fr.toasts{
+	> * {
+		z-index: 100001;
+		padding: 15px;
+		position: absolute;
+		&.bottom{
+			bottom: 0;
+		}
+		&.right{
+			right: 0;	
+		}
+		&.left{
+			left: 0;
+		}
+		&.top{
+			top: 0;
+		}
+	}
+	.fr.toast{
+		max-width: 400px;
+		min-width: 250px;
+		padding: 15px;
+		border-radius: 8px;
+		cursor: pointer;
+		margin-bottom: 10px;
+		display: flex;
+		align-items: center;
+
+		> .icon{
+			font-size: 20px;
+			margin-right: 5px;
+			width: 24px;
+			text-align: center;
+		}
+		> .text{
+			margin-top: 2px;
+			line-height: 14px;
+		}
+
+		-webkit-transition: background .5s ease,transform .1s ease,color .1s ease;
+		transition: 
+			background .5s ease,
+			transform .3s cubic-bezier(0.64, 0.57, 0.67, 1.53),
+			color .1s ease, 
+			opacity .2s ease;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+		&:hover{
+			transform: translateY(-1px);
+		}
+
+		&.enter{
+			transform: translateY(15px) scale(0.95);
+			opacity: 0;
+			// > .icon i{
+			// 	font-size: 18px;
+			// }
+		}
+		&.enter-done,&.exit{
+			opacity: 1;
+		}
+		&.exit{
+			transform: translateY(15px) scale(0.8);
+			opacity: 0;
+		}
+	}
+}
+
+@each $name, $background, $color, $hover in $frontier-colors{
+	.fr.#{$name}.toast{
+		background-color: $background;
+		color: $color;
+		&:hover{
+			background-color: $hover;
+		}
+	}
+}
