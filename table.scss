@@ -133,6 +133,9 @@ table.fr.table{
 		padding: 0.75rem 1rem;
 	}
 	td{
+		> .fr.label{
+			line-height: 16px;
+		}
 		> .meta, > a > .meta{
 			float: right;
 			color: gray;
