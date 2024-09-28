@@ -1,0 +1,63 @@
+@import "_fontawesome.scss";
+
+@font-face {
+	font-family: 'Font Awesome 6 Free';
+	font-style: normal;
+	font-weight: 400;
+	font-display: inline-block;
+	src: url('./icons/fa-regular-400.woff2') format('woff2'), url('./icons/fa-regular-400.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Font Awesome 6 Free';
+	font-style: normal;
+	font-weight: 900;
+	font-display: inline-block;
+	src: url('./icons/fa-solid-900.woff2') format('woff2'), url('./icons/fa-solid-900.ttf') format('truetype');
+ }
+
+i.fr.icon{
+	font-family: 'Font Awesome 6 Free';
+	font-weight: 400;
+	margin-right: 5px;
+	width: 1.18em;
+  	height: 1em;
+	position: relative;
+
+	font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	&.solid{
+		font-weight: 900;
+	}
+
+	&.loading{
+		-webkit-animation: rotation 2s linear infinite;
+		animation: rotation 2s linear infinite;
+	}
+
+	> i.fr.corner.icon{
+		font-size: 0.5em;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 0.5em;
+		height: 0.5em;
+		text-shadow:
+			1px 1px 0 #FFFFFF,
+			-1px 1px 0 #FFFFFF,
+			-1px -3px 0 #FFFFFF,
+			1px -1px 0 #FFFFFF;
+	}
+}
+
+@each $name, $code in $fontawesome-icons{
+	i.fr.#{$name}.icon{
+		&::before{
+			content: $code;
+		}
+	}
+}

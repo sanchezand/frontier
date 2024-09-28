@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "",
 	"scripts": {
-		"build": "rm -rf ./css & sass .:./css --style compressed & rm -rf ./css/node_modules",
+		"build": "rm -rf ./css & sass .:./css --style compressed & rm -rf ./css/node_modules & cp -r ./icons ./css/icons",
 		"prepublish": "rm -rf ./css & sass .:./css --style compressed & rm -rf ./css/node_modules"
 	},
 	"author": "",
@@ -16,6 +16,7 @@
 	"files": [
 		"css/*.css",
 		"css/*.css.map",
+		"css/icons/*",
 		"*.scss"
 	]
 }

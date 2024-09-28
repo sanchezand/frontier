@@ -184,7 +184,7 @@ input[type="password"] {
 	}
 }
 
-.fr.loading:not(.header){
+.fr.loading:not(.header):not(i){
 	&::before{
 		position: absolute;
 		content: '';
