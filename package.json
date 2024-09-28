@@ -5,8 +5,8 @@
 	"main": "",
 	"repository": "git@github.com:sanchezand/frontier.git",
 	"scripts": {
-		"build": "rm -rf ./css & sass .:./css --style compressed & rm -rf ./css/node_modules & cp -r ./icons ./css/icons",
-		"prepublish": "rm -rf ./css & sass .:./css --style compressed & rm -rf ./css/node_modules"
+		"build": "rm -rf ./css && sass .:./css --style compressed && rm -rf ./css/node_modules && mkdir ./css/icons && cp -r ./icons/* ./css/icons",
+		"prepublish": "rm -rf ./css && sass .:./css --style compressed && rm -rf ./css/node_modules && mkdir ./css/icons && cp -r ./icons/* ./css/icons"
 	},
 	"author": "",
 	"license": "ISC",
