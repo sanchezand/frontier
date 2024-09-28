@@ -9,7 +9,7 @@ $CHECKBOX_PADDING: -1px;
 .fr.checkbox{
 	display: flex;
 	align-items: center;
-	height: $CHECKBOX_HEIGHT;
+	// height: $CHECKBOX_HEIGHT;
 	input{
 		width: $CHECKBOX_CONTAINER;
 		height: $CHECKBOX_HEIGHT;
@@ -20,7 +20,7 @@ $CHECKBOX_PADDING: -1px;
 	label{
 		margin-left: $LABEL_MARGIN;
 		position: relative;
-		height: $CHECKBOX_HEIGHT;
+		// height: $CHECKBOX_HEIGHT;
 		line-height: $CHECKBOX_HEIGHT;
 		cursor: pointer;
 
