@@ -9,7 +9,7 @@
 		"prepublish": "rm -rf ./css && sass .:./css --style compressed && rm -rf ./css/node_modules && mkdir ./css/icons && cp -r ./icons/* ./css/icons"
 	},
 	"author": "",
-	"license": "ISC",
+	"license": "MIT",
 	"devDependencies": {
 		"sass": "^1.77.4",
 		"scss": "^0.2.4"
