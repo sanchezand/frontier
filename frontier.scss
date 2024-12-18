@@ -135,7 +135,7 @@ input[type="password"] {
 	}
 }
 
-.ui.modal .content, .fr.groupper:not(.fitted){
+.ui.modal .content, .fr.modal .content, .fr.groupper:not(.fitted){
 	.fr.items:not(.unfitted), .fr.accordion:not(.unfitted){
 		margin-left: -20px;
 		margin-right: -20px;
@@ -149,7 +149,7 @@ input[type="password"] {
 	}
 }
 
-.ui.modal .content,.fr.groupper{
+.ui.modal .content,.fr.modal .content,.fr.groupper{
 	.fr.items,.fr.accordion{
 		.item{
 			font-size: 16px;
@@ -349,8 +349,10 @@ form > .fr.error.message, .fr.small.error.message{
 	font-size: 14px;
 	padding: 10px;
 }
-.ui.modal .fr.error.message{
-	margin-top: 15px;
+.ui.modal, .fr.modal{
+	.fr.error.message{
+		margin-top: 15px;
+	}
 }
 
 /* ================================== */
@@ -368,7 +370,7 @@ form > .fr.error.message, .fr.small.error.message{
 	color: #0F172Ae6;
 	position: relative;
 	
-	&.circular{
+	&.circular,&.circle{
 		padding: 3px 3px;
 		min-width: 20px;
 	}

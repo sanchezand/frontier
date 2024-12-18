@@ -214,7 +214,7 @@ table.fr.table.dark{
 /* ================================== */
 /* MODAL */
 /* ================================== */
-.ui.modal.dark{
+.ui.modal.dark,.fr.modal.dark{
 	background-color: $BACKGROUND;
 	.header{
 		background-color: darken($FOREGROUND, 5%);

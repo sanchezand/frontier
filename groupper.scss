@@ -48,6 +48,11 @@
 		display: flex;
 		align-items: center;
 		height: 45px;
+
+		&.top{
+			border-top-right-radius: 0;
+			border-top-left-radius: 0;
+		}
 		
 		&.fitted,&.compact{
 			margin-bottom: 0px;
@@ -55,6 +60,9 @@
 		&.centered{
 			justify-content: center;
 			text-align: center;
+			.left{
+				text-align: center;
+			}
 		}
 		&.section{
 			border-radius: 0;
@@ -69,7 +77,7 @@
 				margin-top: -21px;
 			}
 		}
-		&.big{
+		&.big,&.big .left{
 			text-transform: none;
 			padding: 30px 20px;
 			font-size: 28px;
