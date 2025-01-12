@@ -216,17 +216,17 @@ table.fr.table.dark{
 /* ================================== */
 .ui.modal.dark, .fr.modals > .fr.modal.dark{
 	background-color: $BACKGROUND;
-	.header{
+	> .header{
 		background-color: darken($FOREGROUND, 5%);
 		color: white;
 		border-bottom-color: $BORDER;
 	}
-	.actions{
+	> .actions{
 		background-color: darken($FOREGROUND, 5%);
 		border-top-color: $BORDER;
 		color: white;
 	}
-	.content{
+	> .content{
 		background-color: $FOREGROUND;
 		color: white;
 	}
