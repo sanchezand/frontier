@@ -277,10 +277,10 @@ table.fr.table{
 		margin-top: -20px;
 	}
 	&:not(.first,.top):first-of-type{
-		border-top: 0;
+		border-top: 0 !important;
 	}
 	&:not(.last,.bottom):last-of-type{
-		margin-bottom: 0;
+		margin-bottom: 0 !important;
 	}
 }
 .fr.groupper.fitted table.fr.table, .fr.groupper table.fitted.fr.table{
