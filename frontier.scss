@@ -697,7 +697,7 @@ form > .fr.error.message, .fr.small.error.message{
 }
 
 .fr.accordion{
-	.item{
+	> .item{
 		.header{
 			display: flex;
 			align-items: center;
@@ -745,7 +745,7 @@ form > .fr.error.message, .fr.small.error.message{
 			}
 		}
 	}
-	&.toggle .item{
+	&.toggle > .item{
 		.header::before{
 			content: "\f111";
 			margin-left: 0;
@@ -758,7 +758,7 @@ form > .fr.error.message, .fr.small.error.message{
 		}
 	}
 	&.selectable{
-		.item > .header{
+		> .item > .header{
 			cursor: pointer;
 			&:hover{
 				background-color: rgba(0,0,0,0.05) !important;
@@ -767,7 +767,7 @@ form > .fr.error.message, .fr.small.error.message{
 	}
 	
 	&.divided{
-		.item{
+		> .item{
 			border-bottom: 1px solid rgba(0,0,0,0.1);
 			&:last-child{
 				border-bottom: 0;
@@ -775,7 +775,7 @@ form > .fr.error.message, .fr.small.error.message{
 		}
 	}
 	&.striped{
-		.item:nth-child(even){
+		> .item:nth-child(even){
 			background-color: rgba(0,0,0,0.02);
 		}
 	}

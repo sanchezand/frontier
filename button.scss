@@ -52,6 +52,15 @@
 		color: transparent !important;
 		position: relative;
 		user-select: none !important;
+
+		&.big{
+			&::before, &::after{
+				height: 24px !important;
+				width: 24px !important;
+				margin: -12px 0 0 -12px !important;
+				border-width: .2em !important;
+			}
+		}
 	}
 	&.checkmark{
 		// background-color: #75BF08 !important;
