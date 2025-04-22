@@ -276,6 +276,9 @@ table.fr.table{
 	&.fitted{
 		margin-top: -20px;
 	}
+	&.last,&.bottom{
+		margin-bottom: -20px !important;
+	}
 	&:not(.first,.top):first-of-type{
 		border-top: 0 !important;
 	}
