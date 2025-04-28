@@ -133,6 +133,14 @@
 		table.fr.table{
 			margin: -1px;
 			width: 100%;
+			&.first,&.top{
+				border-top: 0 !important;
+			}
+		}
+	}
+	&:not(.fitted){
+		> .fr.toolbar{
+			margin: -20px -20px 20px -20px;
 		}
 	}
 	&.compact{
@@ -237,5 +245,15 @@
 				border-top: 1px solid rgba(0, 0, 0, 0.1);
 			}
 		}
+	}
+
+	> .fr.toolbar{
+		border-radius: 0;
+		box-shadow: none;
+		border-left: 0;
+		border-right: 0;
+		> .item{
+			border-radius: 0;
+		}	
 	}
 }

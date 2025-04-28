@@ -68,6 +68,12 @@
 		position: absolute;
 		left: 0;
 		min-width: 100%;
+		white-space: nowrap;
+		
+		// max-width: 200%;
+		// text-overflow: ellipsis;
+		// overflow-x: hidden;
+		
 		text-align: left;
 		border-radius: 8px;
 		z-index: 1;
@@ -92,6 +98,9 @@
 			cursor: pointer;
 			display: flex;
 			align-items: center;
+			
+			text-decoration: none;
+			color: black;
 
 			.text{
 				flex-grow: 1;

@@ -70,26 +70,13 @@ $modal-sizes:
 			padding: $MODAL_PADDING;
 		}
 		> .toolbar{
-			background-color: #F9FAFB;
-			border-bottom: 1px solid #e5e7eb;
-			display: flex;
-
+			box-shadow: none;
+			border-radius: 0;
+			margin-top: -1px;
 			> .item{
-				color: black;
-				text-decoration: none;
-				user-select: none;
-				cursor: pointer;
-				padding: 10px 15px;
-		
-				&.disabled{
-					color: color.adjust(black, $lightness: 60%);
-					cursor: default;
-					pointer-events: none;
-					background-color: transparent !important;
-				}
-
-				&:hover{
-					background-color: color.adjust(#F9FAFB, $lightness: -3%);
+				border-radius: 0 !important;
+				&.dropdown{
+					padding: 0 !important;
 				}
 			}
 		}

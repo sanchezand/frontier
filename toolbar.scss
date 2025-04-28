@@ -26,6 +26,9 @@
 		justify-content: center;
 		align-items: center;
 
+		text-decoration: none;
+		color: black;
+
 		&.icon{
 			min-width: 50px;
 		}
@@ -43,7 +46,8 @@
 				padding: 10px 15px;
 			}
 			> .menu{
-				width: 100%;
+				text-decoration: none;
+				color: black;
 				.item{
 					&.red{
 						color: #cc1414;
@@ -56,6 +60,7 @@
 			display: block;
 			margin-right: 10px;
 			font-size: 16px;
+			line-height: 16px;
 			&.fa-caret-down{
 				margin-left: 10px;
 				margin-right: 0;
