@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $modal-normal-size: 700px;
 $modal-sizes:
 	"large" 1000px,
@@ -98,6 +100,12 @@ $modal-sizes:
 		> :first-child{
 			border-top-left-radius: 12px;
 			border-top-right-radius: 12px;
+		}
+
+		table.fr.table.fitted{
+			&.last,&.bottom{
+				margin-bottom: -20px !important;
+			}
 		}
 
 		&.exceeds{
