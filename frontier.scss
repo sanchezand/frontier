@@ -725,122 +725,6 @@ form > .fr.error.message, .fr.small.error.message{
 	}
 }
 
-.fr.toolbar{
-	$BORDER_RADIUS: 8px;
-	background-color: #F9FAFB;
-	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.06);
-	border: 1px solid rgba(0,0,0,0.1);
-	border-radius: $BORDER_RADIUS;
-	position: relative;
-	display: flex;
-	// overflow: hidden;
-
-	&.stretch{
-		justify-content: stretch;
-		> .item{
-			width: 100%;
-		}
-	}
-
-	> .ui.dropdown > .item{
-		width: 100%;
-	}
-
-	> .item, > .ui.dropdown > .item{
-		user-select: none;
-		padding: 10px 15px;
-		min-width: 100px;
-		text-align: center;
-		cursor: pointer;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		&.icon{
-			min-width: 50px;
-		}
-
-		&.disabled{
-			color: lighten(black, 60%);
-			cursor: default;
-			pointer-events: none;
-			background-color: transparent !important;
-		}
-
-		&.dropdown{
-			.menu{
-				width: 100%;
-				margin-top: 5px;
-				// margin-left: -1px;
-				// border-top-right-radius: 0;
-				// border-top-left-radius: 0;
-				.item{
-					&.red{
-						color: #cc1414;
-					}
-				}
-			}
-		}
-
-		> i{
-			display: block;
-			margin-right: 10px;
-			font-size: 16px;
-			&.fa-caret-down,.dropdown.icon{
-				margin-left: 10px;
-				margin-right: 0;
-			}
-		}
-		&:hover{
-			background-color: darken(#F9FAFB, 3%);
-		}
-		&.fr.loading{
-			&::before{
-				top: 55%;	
-			}
-			&::after{
-				top: 55%;	
-			}
-		}
-	}
-	>.ui.dropdown {
-		.menu .item{
-			&.disabled{
-				color: lighten(black, 20%);
-			}
-			&:first-child{
-				border-top-left-radius: $BORDER_RADIUS;
-				border-top-right-radius: $BORDER_RADIUS;
-			}
-			&:last-child{
-				border-right: 0;
-				border-bottom-right-radius: $BORDER_RADIUS;
-				border-bottom-left-radius: $BORDER_RADIUS;
-			}
-		}
-	}
-
-	&:not(.divided){
-		> .item, > .ui.dropdown > .item{
-			border-radius: $BORDER_RADIUS;
-		}
-	}
-	&.divided{
-		> .item{
-			border-right: 1px solid rgba(0,0,0,0.1);
-			&:first-child{
-				border-top-left-radius: $BORDER_RADIUS;
-				border-bottom-left-radius: $BORDER_RADIUS;
-			}
-			&:last-child{
-				border-right: 0;
-				border-top-right-radius: $BORDER_RADIUS;
-				border-bottom-right-radius: $BORDER_RADIUS;
-			}
-		}
-	}
-}
-
 .fr.mono{
 	font-family: 'Roboto Mono', monospace;
 }
@@ -857,4 +741,6 @@ form > .fr.error.message, .fr.small.error.message{
 @import "modal.scss";
 @import "toast.scss";
 @import "icons.scss";
+@import "toolbar.scss";
+@import "dropdown.scss";
 @import "frontier-fomantic.scss";
