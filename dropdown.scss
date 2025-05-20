@@ -69,7 +69,7 @@
 		left: 0;
 		min-width: 100%;
 		white-space: nowrap;
-		
+
 		// max-width: 200%;
 		// text-overflow: ellipsis;
 		// overflow-x: hidden;
@@ -123,12 +123,12 @@
 			}
 
 			&:first-child{
-				border-top-right-radius: 12px;
-				border-top-left-radius: 12px;
+				border-top-right-radius: 8px;
+				border-top-left-radius: 8px;
 			}
 			&:last-child{
-				border-bottom-right-radius: 12px;
-				border-bottom-left-radius: 12px;
+				border-bottom-right-radius: 8px;
+				border-bottom-left-radius: 8px;
 				border-bottom: 0;
 			}
 

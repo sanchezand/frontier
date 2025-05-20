@@ -203,7 +203,7 @@ table.fr.table{
 			line-height: 18px;
 		}
 	}
-	tr.divider{
+	tr.divider:not(.header){
 		background-color: rgba(0, 0, 0, 0.05) !important;
 		td{
 			padding: 4px 0px !important;
