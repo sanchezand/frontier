@@ -1,0 +1,37 @@
+@use "sass:map";
+@import "_colors.scss";
+
+.fr.segments{
+	display: flex;
+	gap: 10px;
+	background-color: rgba(0,0,0,0.05);
+	border-radius: 12px;
+	padding: 5px;
+	justify-content: space-evenly;
+
+	.segment{
+		padding: 10px 5px;
+		border-radius: 12px;
+		flex-grow: 100;
+		text-align: center;
+		background-color: rgba(255, 255, 255, 0.2);
+		cursor: pointer;
+
+		&.active{
+			font-weight: bold;
+			background-color: #151717;
+			color: white;
+		}
+		
+		&:not(.active):hover{
+			background-color: rgba(0, 0, 0, 0.05);
+		}
+	}
+}
+
+@each $name, $background, $color, $hover in $frontier-colors{
+	.fr.#{$name}.segments .segment.active{
+		color: $color;
+		background-color: $background;
+	}
+}
