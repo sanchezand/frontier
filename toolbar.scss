@@ -45,6 +45,13 @@
 			> .container{
 				padding: 10px 15px;
 			}
+			> .contents{
+				flex: 1;
+				justify-content: center;
+				> .text{
+					width: auto;
+				}
+			}
 			> .menu{
 				text-decoration: none;
 				color: black;
