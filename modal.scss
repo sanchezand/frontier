@@ -122,6 +122,35 @@ $modal-sizes:
 	}
 }
 
+.fr.modal .content, .ui.modal .content{
+	.modal-divider{
+		background-color: #F9FAFB;
+		border-color: #e5e7eb;
+		border-top-width: 1px;
+		border-bottom-width: 1px;
+		border-style: solid;
+		border-right: 0;
+		border-left: 0;
+
+		margin: 10px -21px;
+		width: calc(100% + 42px);
+
+		padding: 8px 20px;
+		line-height: 20px;
+		font-weight: bold;
+		font-size: 16px;
+
+		&:first-child{
+			margin-top: -21px;
+			border-top: 0;
+		}
+
+		&.centered{
+			text-align: center;
+		}
+	}
+}
+
 @each $name, $size in $modal-sizes{
 	.fr.modals .fr.#{$name}.modal{
 		max-width: $size;
